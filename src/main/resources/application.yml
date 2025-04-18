@@ -1,0 +1,4 @@
+parametros:
+    regexPassword: '^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$'
+    regexEmail: '^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$'
+

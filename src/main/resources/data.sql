@@ -1,0 +1,2 @@
+INSERT INTO usuarios (email, password, nombre_apellido, is_active, created, modified, last_login, token)
+  VALUES ('usuario@ejemplo.com', '$2a$10$iIc1V1YTgQUwhy9/y4pVkeLRJmiQtUclIi7nnIVShNPJuP7t4PEZm', 'Nombre Apellido', true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'tokenEjemplo');
