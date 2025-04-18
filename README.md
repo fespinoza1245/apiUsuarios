@@ -56,7 +56,50 @@ Authorization: Bearer <tu_token_aqui>
 
 ## 4. Probar Otros Endpoints
 
-Una vez autenticado, podrás acceder a otros endpoints de la API usando el token de acceso. Utiliza los parámetros y la documentación proporcionada en **Swagger** para hacer pruebas.
+Una vez autenticado, podrás acceder a otros endpoints de la API usando el token de acceso. Utiliza los parámetros y la documentación proporcionada en **Swagger** para hacer pruebas, dejo los curl de cada api: 
+
+```bash
+curl --location 'http://localhost:8080/api/listar' \
+--header 'Authorization: Bearer <tu_token_aqui>'
+
+curl --location 'http://localhost:8080/api/crear' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <tu_token_aqui>' \
+--data-raw '{
+    "name":"Nombre xxxxxx",
+    "email": "prueba@gmail.com",
+    "password":"A1234",
+    "phones":[
+        {
+            "number":"123456789",
+            "citycode":"12",
+            "countrycode":"5"
+        }
+    ]
+}'
+
+curl --location 'http://localhost:8080/api/buscar/1' \
+--header 'Authorization: Bearer <tu_token_aqui>'
+
+curl --location --request PUT 'http://localhost:8080/api/actualizar/1' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <tu_token_aqui>' \
+--data-raw '{
+    "name":"Test xxxx",
+    "email": "prueba@mail2.com",
+    "password":"Clave1234",
+    "phones":[
+        {
+            "number":"123456789",
+            "citycode":"68",
+            "countrycode":"9"
+        }
+    ]
+}'
+
+curl --location --request DELETE 'http://localhost:8080/api/eliminar/1' \
+--header 'Authorization: Bearer <tu_token_aqui>'
+```
 
 ## 🔩 Detalles de las Pruebas
 
